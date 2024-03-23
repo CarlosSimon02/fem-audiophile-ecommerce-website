@@ -13,3 +13,26 @@ export const screens = {
   xl: "80em", //1280px
   "2xl": "90em", //1440px
 };
+
+export const productsDataPath = "/data.json";
+
+export const categories = [
+  {
+    name: "headphones",
+    image:
+      "/assets/images/shared/desktop/image-category-thumbnail-headphones.png",
+    imageAlt: "image of an headphone",
+  },
+  {
+    name: "speakers",
+    image:
+      "/assets/images/shared/desktop/image-category-thumbnail-speakers.png",
+    imageAlt: "image of a speaker",
+  },
+  {
+    name: "earphones",
+    image:
+      "/assets/images/shared/desktop/image-category-thumbnail-earphones.png",
+    imageAlt: "image of an earphone",
+  },
+];
