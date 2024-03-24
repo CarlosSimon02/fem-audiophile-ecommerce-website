@@ -1,34 +1,34 @@
 "use client";
 
+import { categories } from "@/utils/constants";
 import { cn } from "@/utils/functions";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Link from "../ui/Link";
 
 type NavLinksProps = {
+  className?: string;
   hasActiveStyle?: boolean;
 };
 
-const links = [
-  { label: "HOME", path: "/" },
-  { label: "HEADPHONES", path: "/headphones" },
-  { label: "SPEAKERS", path: "/speakers" },
-  { label: "EARPHONES", path: "/earphones" },
-];
+const links = ["", ...categories.map(({ name }) => name)];
 
-const NavLinks = ({ hasActiveStyle = true }: NavLinksProps) => {
+const NavLinks = ({ className, hasActiveStyle = true }: NavLinksProps) => {
   const pathname = usePathname();
 
   return (
-    <ul className="flex gap-8 max-lg:hidden">
+    <ul className={cn("flex gap-x-8", className)}>
       {links.map((link, index) => {
-        const isActive = pathname === link.path;
+        const isActive = pathname === `/${link}`;
         return (
           <li key={index}>
             <Link
-              className={cn(hasActiveStyle && isActive && "text-accent-900")}
-              href={link.path}
+              className={cn(
+                hasActiveStyle && isActive && "text-accent-900",
+                "link"
+              )}
+              href={`/${link}`}
             >
-              {link.label}
+              {link ? link : "home"}
             </Link>
           </li>
         );
