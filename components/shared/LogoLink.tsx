@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LogoIcon } from "../ui/Icons";
+import { LogoIcon } from "../ui/SVGs";
 
 const LogoLink = () => {
   return (
