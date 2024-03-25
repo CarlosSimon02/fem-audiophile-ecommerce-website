@@ -1,26 +1,21 @@
-import { HamburgerIcon, ShoppingCartIcon } from "../ui/Icons";
+import CartControl from "./CartControl";
 import { Container } from "./Container";
 import LogoLink from "./LogoLink";
+import MobileNavControl from "./MobileNavControl";
 import NavLinks from "./NavLinks";
 
 const Header = () => {
   return (
-    <header className="bg-dark-800 text-light-100">
-      <Container as="nav" className="flex justify-between py-8">
-        <button
-          className="shrink-0 lg:hidden sm:max-lg:mr-10"
-          aria-label="Open Menu"
-          aria-haspopup="true"
-        >
-          <HamburgerIcon className="w-4" />
-        </button>
-        <div className="sm:max-lg:mr-auto">
-          <LogoLink />
-        </div>
-        <NavLinks />
-        <button className="shrink-0" aria-label="Open Cart">
-          <ShoppingCartIcon className="w-5" />
-        </button>
+    <header className="bg-dark-700 text-light-100 z-10 main-header">
+      <Container>
+        <nav className="flex justify-between items-center py-8 relative">
+          <MobileNavControl />
+          <div className="sm:max-lg:mr-auto">
+            <LogoLink />
+          </div>
+          <NavLinks className="max-lg:hidden" />
+          <CartControl />
+        </nav>
       </Container>
     </header>
   );
