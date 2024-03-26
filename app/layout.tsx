@@ -1,4 +1,4 @@
-import { WindowProvider } from "@/contexts/WindowContext";
+import { cn } from "@/utils/functions";
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import "./globals.css";
@@ -21,9 +21,7 @@ const RootLayout = ({
 }>) => {
   return (
     <html lang="en">
-      <body className={manrope.variable}>
-        <WindowProvider>{children}</WindowProvider>
-      </body>
+      <body className={cn(manrope.variable, "text-dark-500")}>{children}</body>
     </html>
   );
 };
