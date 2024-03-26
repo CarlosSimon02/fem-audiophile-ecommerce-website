@@ -1,4 +1,3 @@
-import { Container } from "@/components/shared/Container";
 import Footer from "@/components/shared/Footer";
 import Header from "@/components/shared/Header";
 
@@ -10,7 +9,7 @@ const Layout = ({
   return (
     <>
       <Header />
-      <Container as="main">{children}</Container>
+      <main>{children}</main>
       <Footer />
     </>
   );
