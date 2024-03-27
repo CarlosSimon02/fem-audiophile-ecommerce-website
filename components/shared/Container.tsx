@@ -6,7 +6,7 @@ type ContainerProps<T extends React.ElementType> = {
   children: React.ReactNode;
 };
 
-export const Container = <T extends React.ElementType = "div">({
+const Container = <T extends React.ElementType = "div">({
   as,
   className = "",
   children,
@@ -25,3 +25,5 @@ export const Container = <T extends React.ElementType = "div">({
     </Component>
   );
 };
+
+export default Container;
