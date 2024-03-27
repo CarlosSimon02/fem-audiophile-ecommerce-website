@@ -5,14 +5,19 @@ export function useOuterClick(
   callback: () => void
 ): void {
   useEffect(() => {
-    function handleClickOutside(event: MouseEvent): void {
+    const handleClickOutside = (event: MouseEvent): void => {
       if (dom.current && !dom.current.contains(event.target as Node)) {
         callback();
       }
-    }
+    };
 
     const handleEscapeKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
+      if (
+        event.key === "Escape" ||
+        (event.key === "Enter" &&
+          dom.current &&
+          !dom.current.contains(event.target as Node))
+      ) {
         callback();
       }
     };
