@@ -1,5 +1,5 @@
 import CartControl from "./CartControl";
-import { Container } from "./Container";
+import Container from "./Container";
 import LogoLink from "./LogoLink";
 import MobileNavControl from "./MobileNavControl";
 import NavLinks from "./NavLinks";
