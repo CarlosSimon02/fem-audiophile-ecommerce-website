@@ -34,8 +34,21 @@ export type ProductItem = {
 
 export type CartItem = {
   id: number;
-  image: string;
+  slug: string;
   shortName: string;
   price: number;
   quantity: number;
+};
+
+export type FormFields = {
+  name: string;
+  emailAddress: string;
+  phoneNumber: string;
+  address: string;
+  zipCode: string;
+  city: string;
+  country: string;
+  paymentMethod: "e-Money" | "Cash on Delivery";
+  eMoneyNumber: number;
+  eMoneyPIN: number;
 };
