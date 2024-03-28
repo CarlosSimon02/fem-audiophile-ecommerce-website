@@ -1,6 +1,6 @@
 import { cn } from "@/utils/functions";
 import Link from "next/link";
-import { Container } from "../shared/Container";
+import Container from "../shared/Container";
 import ResponsiveImage from "../ui/ResponsiveImage";
 
 const heroImg = {
