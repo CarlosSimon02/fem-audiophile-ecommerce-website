@@ -5,7 +5,7 @@ import AddToCartControl from "./AddToCartControl";
 type DetailsProps = {
   id: number;
   image: DeviceImages;
-  cartImage: string;
+  slug: string;
   name: string;
   shortName: string;
   description: string;
@@ -16,7 +16,7 @@ type DetailsProps = {
 const Details = ({
   id,
   image,
-  cartImage,
+  slug,
   name,
   shortName,
   description,
@@ -41,9 +41,7 @@ const Details = ({
         </h2>
         <p className="max-w-[35.75rem]">{description}</p>
         <p className="font-bold text-dark-900 tracking-[0.080625rem] text-lg">{`$ ${price.toLocaleString()}`}</p>
-        <AddToCartControl
-          itemToAdd={{ id, image: cartImage, price, shortName }}
-        />
+        <AddToCartControl itemToAdd={{ id, slug, price, shortName }} />
       </div>
     </div>
   );
