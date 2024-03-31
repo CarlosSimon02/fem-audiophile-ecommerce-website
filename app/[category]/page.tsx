@@ -3,6 +3,7 @@ import CategoryNavLinks from "@/components/shared/CategoryNavLinks";
 import Container from "@/components/shared/Container";
 import Description from "@/components/shared/Description";
 import dataProducts from "@/data/data.json";
+import { categories } from "@/utils/constants";
 import { ProductItem } from "@/utils/types";
 import { Metadata } from "next";
 
@@ -14,10 +15,10 @@ export const generateMetadata = ({ params }: CategoryProps): Metadata => {
   };
 };
 
-// export const getStaticPaths = (async () => {
-//   const paths = categories.map(({ name }) => ({ params: { category: name } }));
-//   return { paths, fallback: false };
-// }) satisfies GetStaticPaths;
+export const getStaticPaths = () => {
+  const paths = categories.map(({ name }) => ({ params: { category: name } }));
+  return { paths, fallback: false };
+};
 
 const Category = async ({ params }: CategoryProps) => {
   const categoryItems = dataProducts.filter(
