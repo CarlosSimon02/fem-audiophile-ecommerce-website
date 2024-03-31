@@ -15,11 +15,6 @@ export const generateMetadata = ({ params }: CategoryProps): Metadata => {
   };
 };
 
-export const getStaticPaths = () => {
-  const paths = categories.map(({ name }) => ({ params: { category: name } }));
-  return { paths, fallback: false };
-};
-
 const Category = async ({ params }: CategoryProps) => {
   const categoryItems = dataProducts.filter(
     (item) => item.category === params.category
@@ -41,6 +36,11 @@ const Category = async ({ params }: CategoryProps) => {
       </Container>
     </>
   );
+};
+
+export const getStaticPaths = () => {
+  const paths = categories.map(({ name }) => ({ params: { category: name } }));
+  return { paths, fallback: false };
 };
 
 export default Category;

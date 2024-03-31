@@ -23,16 +23,6 @@ export const generateMetadata = async ({
   return { title };
 };
 
-export const getStaticPaths = () => {
-  const paths = (dataProducts as ProductItem[]).map(({ category, slug }) => {
-    return {
-      params: { category, product: slug },
-    };
-  });
-
-  return { paths, fallback: false };
-};
-
 const Product = async ({ params }: ProductProps) => {
   const productItem = dataProducts.find(
     (item) => item.slug === params.product
@@ -77,6 +67,16 @@ const Product = async ({ params }: ProductProps) => {
       <Description className="mt-28 sm:mt-40" />
     </Container>
   );
+};
+
+export const getStaticPaths = () => {
+  const paths = (dataProducts as ProductItem[]).map(({ category, slug }) => {
+    return {
+      params: { category, product: slug },
+    };
+  });
+
+  return { paths, fallback: false };
 };
 
 export default Product;
