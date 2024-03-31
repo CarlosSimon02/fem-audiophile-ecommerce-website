@@ -26,15 +26,15 @@ export const generateMetadata = async ({
   return { title };
 };
 
-export async function getStaticPaths() {
-  const file = await fs.readFile(process.cwd() + productsDataPath, "utf-8");
-  const productItems = JSON.parse(file) as ProductItem[];
-  const paths = productItems.map(({ category, slug }: ProductItem) => ({
-    params: { category, product: slug },
-  }));
+// export const getStaticPaths = (async () => {
+//   const file = await fs.readFile(process.cwd() + productsDataPath, "utf-8");
+//   const productItems = JSON.parse(file) as ProductItem[];
+//   const paths = productItems.map(({ category, slug }: ProductItem) => ({
+//     params: { category, product: slug },
+//   }));
 
-  return { paths, fallback: false };
-}
+//   return { paths, fallback: false };
+// }) satisfies GetStaticPaths;
 
 const getProductItem = async (slug: string) => {
   const file = await fs.readFile(process.cwd() + productsDataPath, "utf-8");
