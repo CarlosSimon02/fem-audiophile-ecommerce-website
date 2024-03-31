@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: var(--font-manrope);
+}
+
 @layer base {
   *,
   *::before,
@@ -9,8 +13,7 @@
     box-sizing: border-box;
   }
 
-  body {
-    font-family: var(--font-manrope);
+  .main-overlayed {
     min-height: 100vh;
     min-height: 100dvh;
     display: flex;
@@ -25,6 +28,7 @@
   h5,
   h6 {
     overflow-wrap: break-word;
+    white-space: pre-line;
   }
 
   input {
@@ -33,10 +37,6 @@
 
   input:focus {
     @apply outline outline-2;
-  }
-
-  p {
-    white-space: pre-line;
   }
 }
 
@@ -84,6 +84,10 @@
   .spin-button {
     @apply button w-[3.09375rem] h-[3.09375rem] p-0 aspect-square text-dark-500 text-base hover:text-accent-900 hover:bg-light-600;
   }
+
+  .inputfield-grid {
+    @apply grid gap-x-4 gap-y-6 sm:grid-cols-2;
+  }
 }
 
 @layer utilities {
@@ -109,26 +113,26 @@
   } */
 }
 
-.menu-enter {
+.dialog-enter {
   opacity: 0;
-  transform: translateY(-6rem);
+  margin-top: -6rem;
 }
 
-.menu-enter-active {
+.dialog-enter-active {
   opacity: 1;
-  transform: translateY(0);
-  transition: opacity 300ms ease-out, transform 300ms ease-out;
+  margin-top: 0;
+  transition: opacity 300ms ease-out, margin-top 300ms ease-out;
 }
 
-.menu-exit {
+.dialog-exit {
   opacity: 1;
-  transform: translateY(0);
+  margin-top: 0;
 }
 
-.menu-exit-active {
+.dialog-exit-active {
   opacity: 0;
-  transform: translateY(-6rem);
-  transition: opacity 300ms ease-in, transform 300ms ease-in;
+  margin-top: -6rem;
+  transition: opacity 300ms ease-in, margin-top 300ms ease-in;
 }
 
 .overlay-enter {
@@ -177,4 +181,26 @@
   margin-top: -5rem;
   transition: opacity 300ms ease-in, transform 300ms ease-in,
     margin-top 300ms ease-out;
+}
+
+.floating-bar-enter {
+  opacity: 0;
+  margin-left: -5rem;
+}
+
+.floating-bar-enter-active {
+  opacity: 1;
+  margin-left: 0;
+  transition: opacity 300ms ease-out, margin-left 300ms ease-out;
+}
+
+.floating-bar-exit {
+  opacity: 1;
+  margin-left: 0;
+}
+
+.floating-bar-exit-active {
+  opacity: 0;
+  margin-left: -5rem;
+  transition: opacity 300ms ease-in, margin-left 300ms ease-out;
 }
