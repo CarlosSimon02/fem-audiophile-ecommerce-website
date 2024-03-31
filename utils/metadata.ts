@@ -71,7 +71,9 @@ const metadata: Metadata = {
     creator: "@CarlosSimonCam1",
     site: websiteUrl,
   },
-  verification: {},
+  verification: {
+    google: "Vif8Ts5ViiBlL4g5SjeucZyUZl-YKUgyu-sC7sfWlnQ",
+  },
 };
 
 export default metadata;
