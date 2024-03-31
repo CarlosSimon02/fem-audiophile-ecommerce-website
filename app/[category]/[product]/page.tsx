@@ -69,7 +69,7 @@ const Product = async ({ params }: ProductProps) => {
   );
 };
 
-export const getStaticPaths = () => {
+export function getStaticPaths() {
   const paths = (dataProducts as ProductItem[]).map(({ category, slug }) => {
     return {
       params: { category, product: slug },
@@ -77,6 +77,6 @@ export const getStaticPaths = () => {
   });
 
   return { paths, fallback: false };
-};
+}
 
 export default Product;

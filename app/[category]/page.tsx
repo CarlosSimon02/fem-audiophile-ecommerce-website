@@ -38,9 +38,9 @@ const Category = async ({ params }: CategoryProps) => {
   );
 };
 
-export const getStaticPaths = () => {
+export function getStaticPaths() {
   const paths = categories.map(({ name }) => ({ params: { category: name } }));
   return { paths, fallback: false };
-};
+}
 
 export default Category;
