@@ -1,0 +1,22 @@
+{
+  "name": "Audiophile",
+  "short_name": "Audiophile",
+  "description": "Explore Audiophile for top-quality audio gear including earphones, headphones, and speakers. Discover the perfect sound companion for your music journey.",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#0E0E0E",
+  "theme_color": "#D87D4A",
+  "categories": ["shopping", "music", "business"],
+  "icons": [
+    {
+      "src": "/assets/logos/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/logos/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
