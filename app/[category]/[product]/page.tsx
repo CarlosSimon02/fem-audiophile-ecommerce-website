@@ -6,9 +6,8 @@ import CategoryNavLinks from "@/components/shared/CategoryNavLinks";
 import Container from "@/components/shared/Container";
 import Description from "@/components/shared/Description";
 import GoBack from "@/components/shared/GoBack";
-import { productsDataPath } from "@/utils/constants";
+import dataProducts from "@/data/data.json";
 import { ProductItem } from "@/utils/types";
-import { promises as fs } from "fs";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
@@ -17,9 +16,7 @@ type ProductProps = { params: { category: string; product: string } };
 export const generateMetadata = async ({
   params,
 }: ProductProps): Promise<Metadata> => {
-  const file = await fs.readFile(process.cwd() + productsDataPath, "utf-8");
-  const productItems = JSON.parse(file) as ProductItem[];
-  const title = productItems.find(({ slug }) => {
+  const title = dataProducts.find(({ slug }) => {
     return slug === params.product;
   })?.name;
 
@@ -36,14 +33,10 @@ export const generateMetadata = async ({
 //   return { paths, fallback: false };
 // }) satisfies GetStaticPaths;
 
-const getProductItem = async (slug: string) => {
-  const file = await fs.readFile(process.cwd() + productsDataPath, "utf-8");
-  const productItems: ProductItem[] = JSON.parse(file);
-  return productItems.find((item) => item.slug === slug);
-};
-
 const Product = async ({ params }: ProductProps) => {
-  const productItem = await getProductItem(params.product);
+  const productItem = dataProducts.find(
+    (item) => item.slug === params.product
+  ) as ProductItem;
 
   if (!productItem) notFound();
 

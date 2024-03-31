@@ -2,9 +2,8 @@ import CategoryItems from "@/components/category/CategoryItems";
 import CategoryNavLinks from "@/components/shared/CategoryNavLinks";
 import Container from "@/components/shared/Container";
 import Description from "@/components/shared/Description";
-import { productsDataPath } from "@/utils/constants";
+import dataProducts from "@/data/data.json";
 import { ProductItem } from "@/utils/types";
-import { promises as fs } from "fs";
 import { Metadata } from "next";
 
 type CategoryProps = { params: { category: string } };
@@ -20,14 +19,10 @@ export const generateMetadata = ({ params }: CategoryProps): Metadata => {
 //   return { paths, fallback: false };
 // }) satisfies GetStaticPaths;
 
-const getCategoryItems = async (category: string) => {
-  const file = await fs.readFile(process.cwd() + productsDataPath, "utf-8");
-  const productItems = JSON.parse(file).reverse() as ProductItem[];
-  return productItems.filter((item) => item.category === category);
-};
-
 const Category = async ({ params }: CategoryProps) => {
-  const productItems = await getCategoryItems(params.category);
+  const categoryItems = dataProducts.filter(
+    (item) => item.category === params.category
+  ) as ProductItem[];
 
   return (
     <>
@@ -39,7 +34,7 @@ const Category = async ({ params }: CategoryProps) => {
         </Container>
       </div>
       <Container className="mt-48">
-        <CategoryItems items={productItems} />
+        <CategoryItems items={categoryItems} />
         <CategoryNavLinks />
         <Description className="mt-28 lg:mt-40" />
       </Container>
