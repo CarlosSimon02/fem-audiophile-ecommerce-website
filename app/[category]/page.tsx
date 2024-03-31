@@ -5,7 +5,7 @@ import Description from "@/components/shared/Description";
 import { categories, productsDataPath } from "@/utils/constants";
 import { ProductItem } from "@/utils/types";
 import { promises as fs } from "fs";
-import { GetStaticPaths, Metadata } from "next";
+import { Metadata } from "next";
 
 type CategoryProps = { params: { category: string } };
 
@@ -15,10 +15,10 @@ export const generateMetadata = ({ params }: CategoryProps): Metadata => {
   };
 };
 
-export const getStaticPaths = (async () => {
+export async function getStaticPaths() {
   const paths = categories.map(({ name }) => ({ params: { category: name } }));
   return { paths, fallback: false };
-}) satisfies GetStaticPaths;
+}
 
 const getCategoryItems = async (category: string) => {
   const file = await fs.readFile(process.cwd() + productsDataPath, "utf-8");

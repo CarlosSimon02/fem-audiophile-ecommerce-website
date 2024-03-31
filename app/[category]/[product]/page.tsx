@@ -9,7 +9,7 @@ import GoBack from "@/components/shared/GoBack";
 import { productsDataPath } from "@/utils/constants";
 import { ProductItem } from "@/utils/types";
 import { promises as fs } from "fs";
-import { GetStaticPaths, Metadata } from "next";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 type ProductProps = { params: { category: string; product: string } };
@@ -26,7 +26,7 @@ export const generateMetadata = async ({
   return { title };
 };
 
-export const getStaticPaths = (async () => {
+export async function getStaticPaths() {
   const file = await fs.readFile(process.cwd() + productsDataPath, "utf-8");
   const productItems = JSON.parse(file) as ProductItem[];
   const paths = productItems.map(({ category, slug }: ProductItem) => ({
@@ -34,7 +34,7 @@ export const getStaticPaths = (async () => {
   }));
 
   return { paths, fallback: false };
-}) satisfies GetStaticPaths;
+}
 
 const getProductItem = async (slug: string) => {
   const file = await fs.readFile(process.cwd() + productsDataPath, "utf-8");
