@@ -14,7 +14,7 @@ export const screens = {
   "2xl": "90em", //1440px
 };
 
-export const productsDataPath = "/data.json";
+export const productsDataPath = "/app/data.json";
 
 export const categories = [
   {
