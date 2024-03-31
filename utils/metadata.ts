@@ -71,6 +71,7 @@ const metadata: Metadata = {
     creator: "@CarlosSimonCam1",
     site: websiteUrl,
   },
+  verification: {},
 };
 
 export default metadata;
