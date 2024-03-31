@@ -3,7 +3,7 @@ import { Metadata } from "next";
 const appName = "Audiophile";
 const description =
   "Explore Audiophile for top-quality audio gear including earphones, headphones, and speakers. Discover the perfect sound companion for your music journey.";
-const websiteUrl = "https://just-example.com"; //just example
+const websiteUrl = "https://officialaudiophile.vercel.app";
 
 const metadata: Metadata = {
   title: {
