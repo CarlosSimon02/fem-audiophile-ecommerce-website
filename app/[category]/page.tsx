@@ -3,9 +3,9 @@ import CategoryNavLinks from "@/components/shared/CategoryNavLinks";
 import Container from "@/components/shared/Container";
 import Description from "@/components/shared/Description";
 import dataProducts from "@/data/data.json";
-import { categories } from "@/utils/constants";
 import { ProductItem } from "@/utils/types";
 import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 type CategoryProps = { params: { category: string } };
 
@@ -19,6 +19,8 @@ const Category = async ({ params }: CategoryProps) => {
   const categoryItems = dataProducts.filter(
     (item) => item.category === params.category
   ) as ProductItem[];
+
+  if (!categoryItems.length) notFound();
 
   return (
     <>
@@ -37,10 +39,5 @@ const Category = async ({ params }: CategoryProps) => {
     </>
   );
 };
-
-export async function getStaticPaths() {
-  const paths = categories.map(({ name }) => ({ params: { category: name } }));
-  return { paths, fallback: false };
-}
 
 export default Category;

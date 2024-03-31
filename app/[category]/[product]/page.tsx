@@ -69,14 +69,4 @@ const Product = async ({ params }: ProductProps) => {
   );
 };
 
-export async function getStaticPaths() {
-  const paths = (dataProducts as ProductItem[]).map(({ category, slug }) => {
-    return {
-      params: { category, product: slug },
-    };
-  });
-
-  return { paths, fallback: false };
-}
-
 export default Product;
