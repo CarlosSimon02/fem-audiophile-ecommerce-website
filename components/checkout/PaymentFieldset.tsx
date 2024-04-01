@@ -31,6 +31,7 @@ const PaymentFieldset = () => {
             defaultChecked={true}
             onChange={handlePaymentMethodChange}
             role="radio"
+            aria-checked={paymentMethod === "e-Money"}
           />
           <Radio
             label="Cash on Delivery"
@@ -38,6 +39,7 @@ const PaymentFieldset = () => {
             groupName="paymentMethod"
             onChange={handlePaymentMethodChange}
             role="radio"
+            aria-checked={paymentMethod === "Cash on Delivery"}
           />
         </div>
       </div>
