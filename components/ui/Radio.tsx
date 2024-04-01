@@ -1,8 +1,8 @@
 import { cn } from "@/utils/functions";
-import { ChangeEventHandler } from "react";
+import { ChangeEventHandler, HTMLProps } from "react";
 import { FieldValues, RegisterOptions, useFormContext } from "react-hook-form";
 
-type RadioProps = {
+type RadioProps = Omit<HTMLProps<HTMLLabelElement>, "onChange"> & {
   label: string;
   name: string;
   groupName: string;
@@ -18,6 +18,7 @@ const Radio = ({
   defaultChecked,
   registerOptions,
   onChange,
+  ...props
 }: RadioProps) => {
   const { register } = useFormContext();
 
@@ -32,6 +33,7 @@ const Radio = ({
         defaultChecked={defaultChecked}
         value={label}
         onChange={onChange}
+        aria-hidden={true}
       />
       <label
         htmlFor={name}
@@ -40,6 +42,7 @@ const Radio = ({
           "cursor-pointer outline outline-[0.0625rem] outline-light-border [input:checked+&]:outline-accent-900 [input:checked+&]:outline-[0.125rem]",
           "flex items-center gap-4"
         )}
+        {...props}
       >
         <div
           className={cn(

@@ -2,24 +2,35 @@ import { categories } from "@/utils/constants";
 import { cn } from "@/utils/functions";
 import Image from "next/image";
 import Link from "next/link";
+import { HTMLProps } from "react";
 import { ArrowRightIcon } from "../ui/SVGs";
 
-type CategoryNavLinksProps = {
-  className?: string;
+type CategoryNavLinksProps = HTMLProps<HTMLUListElement> & {
   onNavigate?: () => void;
 };
 
-const CategoryNavLinks = ({ className, onNavigate }: CategoryNavLinksProps) => {
+const CategoryNavLinks = ({
+  className,
+  onNavigate,
+  ...props
+}: CategoryNavLinksProps) => {
   return (
     <ul
       className={cn(
         "mt-24 sm:mt-36 lg:mt-48 flex justify-stretch gap-x-3 lg:gap-x-8 gap-y-20 max-sm:flex-col",
         className
       )}
+      role="menu"
+      {...props}
     >
       {categories.map(({ name, image, imageAlt }, index) => {
         return (
-          <li key={index} className="flex-1 text-center">
+          <li
+            key={index}
+            className="flex-1 text-center"
+            id={`mi${index}`}
+            role="menuitem"
+          >
             <Link href={`/${name}`} className="group" onClick={onNavigate}>
               <div className="relative pt-28 pb-5 bg-light-300 rounded-lg ">
                 <Image

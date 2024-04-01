@@ -21,8 +21,7 @@ const CartControl = () => {
           isModalOpen ? "pointer-events-none" : undefined,
           "shrink-0 relative"
         )}
-        aria-label={isModalOpen ? "Close Menu" : "Open Menu"}
-        aria-haspopup="true"
+        aria-label="Open Cart"
         onClick={handleOpenModal}
       >
         <ShoppingCartIcon className="w-5" />

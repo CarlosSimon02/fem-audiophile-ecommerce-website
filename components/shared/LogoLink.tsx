@@ -3,7 +3,7 @@ import { LogoIcon } from "../ui/SVGs";
 
 const LogoLink = () => {
   return (
-    <Link href="/">
+    <Link href="/" aria-label="Audiophile - Home">
       <LogoIcon className="w-44" />
     </Link>
   );

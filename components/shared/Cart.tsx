@@ -33,12 +33,18 @@ const Cart = forwardRef(
         className={
           "bg-light-100 rounded-lg p-7 text-dark-500 w-full max-w-[23.5625rem] h-[30.5rem] absolute right-0 top-[7.125rem] lg:top-[8.0625rem] flex flex-col gap-8"
         }
+        role="dialog"
+        aria-modal="true"
+        aria-label="Cart"
         ref={ref}
       >
         {cartCount ? (
           <>
             <div className="flex justify-between items-center">
-              <h3 className="header-text tracking-[0.08125rem] text-dark-900 text-lg">
+              <h3
+                className="header-text tracking-[0.08125rem] text-dark-900 text-lg"
+                aria-live="polite"
+              >
                 {`Cart(${cartCount.toLocaleString()})`}
               </h3>
               <button className="link-button" onClick={handleRemoveAll}>
@@ -106,7 +112,7 @@ const Cart = forwardRef(
               height={300}
               alt={`image of shopping basket`}
             />
-            <p>There is nothing here</p>
+            <p aria-live="polite">The cart is empty</p>
           </div>
         )}
       </div>

@@ -59,7 +59,7 @@ const InputNumber = ({
     <div className="flex bg-light-300">
       <button
         className={cn("spin-button", isSmall && "w-8 h-8")}
-        aria-label="Decrease by One"
+        aria-label="Decrease quantity by one"
         onClick={decreaseQuantityByOne}
       >
         <span aria-hidden="true">-</span>
@@ -78,7 +78,7 @@ const InputNumber = ({
       />
       <button
         className={cn("spin-button", isSmall && "w-8 h-8")}
-        aria-label="Increase by One"
+        aria-label="Increase quantity by one"
         onClick={increaseQuantityByOne}
       >
         <span aria-hidden="true">+</span>

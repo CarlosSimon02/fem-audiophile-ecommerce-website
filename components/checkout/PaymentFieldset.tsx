@@ -23,19 +23,21 @@ const PaymentFieldset = () => {
         >
           Payment Method
         </p>
-        <div className="grid gap-4">
+        <div className="grid gap-4" role="radiogroup">
           <Radio
             label="e-Money"
             name="eMoney"
             groupName="paymentMethod"
             defaultChecked={true}
             onChange={handlePaymentMethodChange}
+            role="radio"
           />
           <Radio
             label="Cash on Delivery"
             name="cashOnDelivery"
             groupName="paymentMethod"
             onChange={handlePaymentMethodChange}
+            role="radio"
           />
         </div>
       </div>

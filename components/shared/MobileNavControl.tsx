@@ -19,8 +19,11 @@ const MobileNavControl = () => {
           isModalOpen ? "pointer-events-none" : undefined,
           "shrink-0 sm:max-lg:mr-10 lg:hidden"
         )}
-        aria-label={isModalOpen ? "Close Menu" : "Open Menu"}
+        id="menu-button"
+        aria-label="Open Menu"
         aria-haspopup="true"
+        aria-expanded={isModalOpen}
+        aria-controls="menu"
         onClick={handleOpenModal}
       >
         <HamburgerIcon className="w-4" />
@@ -40,6 +43,10 @@ const MobileNavControl = () => {
             <Container>
               <CategoryNavLinks
                 className="!m-0"
+                id="menu"
+                tabIndex={-1}
+                aria-labelledby="menu-button"
+                aria-activedescendant="mi1"
                 onNavigate={handleCloseModal}
               />
             </Container>

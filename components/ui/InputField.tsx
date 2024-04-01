@@ -36,7 +36,9 @@ const InputField = ({
           {label}
         </label>
         {errors?.[name] && (
-          <p className="text-red-500">{errors?.[name]?.message as string}</p>
+          <p className="text-red-500" id={`${name}-alert`} aria-live="polite">
+            {errors?.[name]?.message as string}
+          </p>
         )}
       </div>
       <input
@@ -53,6 +55,7 @@ const InputField = ({
             ? "outline-[0.125rem] outline-red-500"
             : "outline-[0.0625rem] outline-light-border focus:outline-accent-900 focus:outline-[0.125rem]"
         )}
+        aria-describedby={`${name}-alert`}
       />
     </div>
   );

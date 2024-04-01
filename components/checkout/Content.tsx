@@ -30,6 +30,7 @@ const Content = () => {
         <FormProvider {...methods}>
           <form
             className="flex max-lg:flex-col gap-8 mt-6 sm:mt-14 lg:items-start"
+            method="POST"
             onSubmit={methods.handleSubmit(onSubmit)}
             noValidate={true}
           >

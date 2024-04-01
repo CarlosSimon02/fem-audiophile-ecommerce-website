@@ -31,12 +31,16 @@ body {
     white-space: pre-line;
   }
 
+  *:focus-visible {
+    @apply outline-dashed outline-[0.125rem] outline-accent-900 outline-offset-4;
+  }
+
   input {
     @apply caret-accent-900;
   }
 
   input:focus {
-    @apply outline outline-2;
+    @apply outline outline-2 outline-offset-0;
   }
 }
 
