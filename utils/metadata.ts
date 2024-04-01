@@ -1,9 +1,9 @@
+import { BASE_URL } from "@/utils/constants";
 import { Metadata } from "next";
 
 const appName = "Audiophile";
 const description =
   "Explore Audiophile for top-quality audio gear including earphones, headphones, and speakers. Discover the perfect sound companion for your music journey.";
-const websiteUrl = "https://officialaudiophile.vercel.app";
 
 const metadata: Metadata = {
   title: {
@@ -42,11 +42,11 @@ const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(websiteUrl),
+  metadataBase: new URL(BASE_URL),
   openGraph: {
     title: appName,
     description: description,
-    url: websiteUrl,
+    url: BASE_URL,
     siteName: appName,
     locale: "en_US",
     type: "website",
@@ -69,11 +69,12 @@ const metadata: Metadata = {
     title: appName,
     description: description,
     creator: "@CarlosSimonCam1",
-    site: websiteUrl,
+    site: BASE_URL,
   },
   verification: {
     google: "Vif8Ts5ViiBlL4g5SjeucZyUZl-YKUgyu-sC7sfWlnQ",
   },
+  category: "technology",
 };
 
 export default metadata;

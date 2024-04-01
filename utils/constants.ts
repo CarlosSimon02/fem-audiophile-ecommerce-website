@@ -14,8 +14,6 @@ export const screens = {
   "2xl": "90em", //1440px
 };
 
-export const productsDataPath = "/app/data/data.json";
-
 export const categories = [
   {
     name: "headphones",
@@ -36,3 +34,5 @@ export const categories = [
     imageAlt: "image of an earphone",
   },
 ];
+
+export const BASE_URL = "https://officialaudiophile.vercel.app";
