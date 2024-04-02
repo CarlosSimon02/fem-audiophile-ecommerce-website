@@ -10,8 +10,6 @@ This is a solution to the [Audiophile e-commerce website challenge on Frontend M
   - [Links](#linkss)
 - [My process](#🚛-my-processrocess)
   - [Built with](#⚙️-built-with-with)
-  - [Problems and My Solution](#💡-problems-and-my-solutionsolution)
-  - [Problems and Questions](#🤔-problems-and-questionsstions)
   - [To Do List](#🖊️-to-do-list)
   - [Useful resources](#🌴-useful-resources)
 - [Follow Me and Let Us Connect](#follow-me-and-let-us-connect)
@@ -53,10 +51,6 @@ Users should be able to:
 - [React Hook Form](https://react-hook-form.com/) - For managing form state and validation efficiently
 - [React Transition Group](https://reactcommunity.org/react-transition-group/) - Creating animations when mounting and unmounting components
 - [Zustand](https://zustand-demo.pmnd.rs/) - For managing state in a predictable and efficient manner and storing data locally.
-
-### 💡 Problems and My Solution
-
-### 🤔 Problems and Questions
 
 ### 🖊️ To Do List
 
