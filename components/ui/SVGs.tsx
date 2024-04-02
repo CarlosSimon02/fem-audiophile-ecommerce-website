@@ -24,7 +24,7 @@ export const LogoIcon = (props: SVGProps<SVGSVGElement>) => (
       fill="white"
     />
     <defs>
-      <clipPath id="clip0_53_9">
+      <clipPath>
         <rect width="27" height="27" fill="white" />
       </clipPath>
     </defs>
