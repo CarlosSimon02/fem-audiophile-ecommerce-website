@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: ---> [LINK]
+- Solution URL: ---> [LINK](https://www.frontendmentor.io/solutions/responsive-audiophile-website-using-next14-and-tailwind-css-Oa6YN4_wK-)
 - Live Site URL: ---> [LINK](https://officialaudiophile.vercel.app/)
 
 ## 🚛 My process
