@@ -9,8 +9,8 @@ This is a solution to the [Audiophile e-commerce website challenge on Frontend M
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
-  - [Built with](#⚙️built-with)
-  - [To Do](#🖊️to-do)
+  - [Built with](#built-with)
+  - [To Do](#to-do)
   - [Useful resources](#useful-resources)
 - [Follow Me and Let Us Connect](#follow-me-and-let-us-connect)
 
@@ -43,7 +43,7 @@ Users should be able to:
 
 ## 🚛My process
 
-### ⚙️Built With
+### Built With
 
 - [Next.js](https://nextjs.org/) - A React framework used for production
 - [tailwindcss](https://tailwindcss.com/) - For styling
@@ -52,7 +52,7 @@ Users should be able to:
 - [React Transition Group](https://reactcommunity.org/react-transition-group/) - Creating animations when mounting and unmounting components
 - [Zustand](https://zustand-demo.pmnd.rs/) - For managing state in a predictable and efficient manner and storing data locally.
 
-### 🖊️To Do
+### To Do
 
 - Set up user login: Let users sign up for an account to see their shopping cart on any device.
 - Clean up code: Improve the code structure and organization. There's a lot of repetitive code that needs to be simplified and organized better.
