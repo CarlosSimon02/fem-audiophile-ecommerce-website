@@ -10,7 +10,7 @@ This is a solution to the [Audiophile e-commerce website challenge on Frontend M
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [To Do List](#to-do)
+  - [To Do](#to-do)
   - [Useful resources](#useful-resources)
 - [Follow Me and Let Us Connect](#follow-me-and-let-us-connect)
 
