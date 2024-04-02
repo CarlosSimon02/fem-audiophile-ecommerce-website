@@ -23,7 +23,7 @@ const MobileNavControl = () => {
         aria-label="Open Menu"
         aria-haspopup="true"
         aria-expanded={isModalOpen}
-        aria-controls="menu"
+        aria-controls={isModalOpen ? "menu" : ""}
         onClick={handleOpenModal}
       >
         <HamburgerIcon className="w-4" />
