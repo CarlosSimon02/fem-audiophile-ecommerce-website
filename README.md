@@ -1,22 +1,22 @@
-# 🎧 Audiophile E-commerce Website
+# 🎧Audiophile E-commerce Website
 
 This is a solution to the [Audiophile e-commerce website challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/audiophile-ecommerce-website-C8cuSd_wx). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## 📜 Table of contents
+## 📜Table of contents
 
-- [Overview](#👁️-overview)
-  - [The challenge](#🏃-the-challengehallenge)
-  - [Screenshot](#📸-screenshothot)
-  - [Links](#linkss)
-- [My process](#🚛-my-processrocess)
-  - [Built with](#⚙️-built-with-with)
-  - [To Do List](#🖊️-to-do-list)
-  - [Useful resources](#🌴-useful-resources)
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [To Do List](#to-do-list)
+  - [Useful resources](#useful-resources)
 - [Follow Me and Let Us Connect](#follow-me-and-let-us-connect)
 
-## 👁️ Overview
+## 👁️Overview
 
-### 🏃 The challenge
+### 🏃The challenge
 
 Users should be able to:
 
@@ -32,18 +32,18 @@ Users should be able to:
 - See an order confirmation modal after checking out with an order summary
 - **Bonus**: Keep track of what's in the cart, even after refreshing the browser (`localStorage` could be used for this if you're not building out a full-stack app)
 
-### 📸 Screenshot
+### 📸Screenshot
 
 ![Screenshot of the website](./screenshot/image.png)
 
-### Links
+### 🔗Links
 
 - Solution URL: ---> [LINK](https://www.frontendmentor.io/solutions/responsive-audiophile-website-using-next14-and-tailwind-css-Oa6YN4_wK-)
 - Live Site URL: ---> [LINK](https://officialaudiophile.vercel.app/)
 
-## 🚛 My process
+## 🚛My process
 
-### ⚙️ Built with
+### ⚙️Built With
 
 - [Next.js](https://nextjs.org/) - A React framework used for production
 - [tailwindcss](https://tailwindcss.com/) - For styling
@@ -52,12 +52,12 @@ Users should be able to:
 - [React Transition Group](https://reactcommunity.org/react-transition-group/) - Creating animations when mounting and unmounting components
 - [Zustand](https://zustand-demo.pmnd.rs/) - For managing state in a predictable and efficient manner and storing data locally.
 
-### 🖊️ To Do List
+### 🖊️To Do List
 
 - Set up user login: Let users sign up for an account to see their shopping cart on any device.
 - Clean up code: Improve the code structure and organization. There's a lot of repetitive code that needs to be simplified and organized better.
 
-### 🌴 Useful resources
+### 🌴Useful resources
 
 Documentations are good enough to help me start, but I also gotta shout out some awesome websites and communities that have been a big help.
 
@@ -67,7 +67,7 @@ Documentations are good enough to help me start, but I also gotta shout out some
 - [Codevolution](https://www.youtube.com/@Codevolution)
 - [ChatGPT](https://chat.openai.com)
 
-## 🧑‍🤝‍🧑 Follow Me and Let Us Connect
+## 🧑‍🤝‍🧑Follow Me and Let Us Connect
 
 - Frontend Mentor - [@CarlosSimon02](https://www.frontendmentor.io/profile/CarlosSimon02)
 - Linkedin - [@carlossimon02](https://www.linkedin.com/in/carlossimon02/)
